@@ -32,17 +32,7 @@
 
 
 
-<!-- NOTE: google tracking -->
-
-<script type="application/javascript">
-	var doNotTrack = false;
-	if (!doNotTrack) {
-		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-		ga('create', 'UA-28835595-1', 'auto', { 'anonymize_ip': true });
-		ga('send', 'pageview', { 'anonymize_ip': true });
-	}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script defer data-domain="julialang.org" src="https://plausible.io/js/script.js"></script>
 
 
    <title>Platform Specific Instructions for Official Binaries</title>   
@@ -133,10 +123,10 @@
 <h2 id="cross-platform_installer"><a href="#cross-platform_installer" class="header-anchor">Cross-platform installer</a></h2>
 <p>An installer and version manager for Julia called <a href="https://github.com/JuliaLang/juliaup">juliaup</a> can be installed <a href="https://github.com/JuliaLang/juliaup#mac-and-linux">via the command line</a> on Linux and Mac and is available in the <a href="https://www.microsoft.com/store/apps/9NJNWW8PVKMN">Microsoft Store</a> for Windows. It can be used to install specific Julia versions or update to the latest release. This package handles all PATH related aspects of Julia, and alerts users when new Julia versions are released.</p>
 <h2 id="linux_and_freebsd"><a href="#linux_and_freebsd" class="header-anchor">Linux and FreeBSD</a></h2>
-<p>It is strongly recommended that the official generic binaries from the downloads page be used to install Julia on Linux and FreeBSD. The following set of commands downloads the latest version of Julia into a directory named <code>julia-1.10.2</code>.</p>
+<p>It is strongly recommended that the official generic binaries from the downloads page be used to install Julia on Linux and FreeBSD. The following set of commands downloads the latest version of Julia into a directory named <code>julia-1.10.4</code>.</p>
 
-<pre><code class="shell hljs">wget https://julialang-s3.julialang.org/bin/linux/x64/1.10/julia-1.10.2-linux-x86_64.tar.gz
-tar zxvf julia-1.10.2-linux-x86_64.tar.gz</code></pre>
+<pre><code class="shell hljs">wget https://julialang-s3.julialang.org/bin/linux/x64/1.10/julia-1.10.4-linux-x86_64.tar.gz
+tar zxvf julia-1.10.4-linux-x86_64.tar.gz</code></pre>
 
 <h3 id="running_julia"><a href="#running_julia" class="header-anchor">Running Julia</a></h3>
 <p>The generic Linux and FreeBSD binaries do not require any special installation steps, but you will need to ensure that your system can find the <code>julia</code> executable. The directory where Julia is installed is referred to as <code>&lt;Julia directory&gt;</code>.</p>
@@ -172,7 +162,7 @@ tar zxvf julia-1.10.2-linux-x86_64.tar.gz</code></pre>
 </li>
 </ol>
 <h4 id="adding_julia_to_path_for_older_releases"><a href="#adding_julia_to_path_for_older_releases" class="header-anchor">Adding Julia to path for older releases</a></h4>
-<p>For older &#40;&lt;&#61; Julia 1.5.4&#41; downloads, note the installation directory at the time of installation. The installation directory should look something like <code>C:\Users\JohnDoe\AppData\Local\Programs\Julia-1.10.2</code>, <em>please note this path</em>.</p>
+<p>For older &#40;&lt;&#61; Julia 1.5.4&#41; downloads, note the installation directory at the time of installation. The installation directory should look something like <code>C:\Users\JohnDoe\AppData\Local\Programs\Julia-1.10.4</code>, <em>please note this path</em>.</p>
 <p>Then add the Julia executable directory to PATH by performing the following steps.</p>
 <h5 id="adding_julia_to_path_on_windows_10"><a href="#adding_julia_to_path_on_windows_10" class="header-anchor">Adding Julia to PATH on Windows 10,</a></h5>
 <ol>
@@ -180,7 +170,7 @@ tar zxvf julia-1.10.2-linux-x86_64.tar.gz</code></pre>
 </li>
 <li><p>Under either the &quot;User Variables&quot; or &quot;System Variables&quot; section, find the row with &quot;Path&quot;, and click edit.</p>
 </li>
-<li><p>The &quot;Edit environment variable&quot; UI will appear. Here, click &quot;New&quot;, and paste in the directory noted from the installation stage. This should look something like <code>C:\Users\JohnDoe\AppData\Local\Programs\Julia-1.10.2\bin</code>.</p>
+<li><p>The &quot;Edit environment variable&quot; UI will appear. Here, click &quot;New&quot;, and paste in the directory noted from the installation stage. This should look something like <code>C:\Users\JohnDoe\AppData\Local\Programs\Julia-1.10.4\bin</code>.</p>
 </li>
 <li><p>Click OK. You can now run Julia from the command line, by typing <code>julia</code>&#33;</p>
 </li>
@@ -193,7 +183,7 @@ tar zxvf julia-1.10.2-linux-x86_64.tar.gz</code></pre>
 </li>
 <li><p>In the Edit System Variables window, move the cursor to the end of the field.</p>
 </li>
-<li><p>If there is no semicolon at the end, add it and paste in the path to the <code>bin</code> folder within the installation directory noted earlier. This path should look something like <code>C:\Users\JohnDoe\AppData\Local\Programs\Julia-1.10.2\bin</code>.</p>
+<li><p>If there is no semicolon at the end, add it and paste in the path to the <code>bin</code> folder within the installation directory noted earlier. This path should look something like <code>C:\Users\JohnDoe\AppData\Local\Programs\Julia-1.10.4\bin</code>.</p>
 </li>
 <li><p>Click OK. You can now run Julia from the command line, by typing <code>julia</code>&#33;</p>
 </li>
@@ -209,7 +199,7 @@ tar zxvf julia-1.10.2-linux-x86_64.tar.gz</code></pre>
 <h3 id="uninstallation__2"><a href="#uninstallation__2" class="header-anchor">Uninstallation</a></h3>
 <p>Uninstallation is preferably performed by using the Windows uninstaller. The directory in <code>&#37;HOME&#37;/.julia</code> can then be deleted if you want to remove all traces of Julia &#40;this includes user installed packages&#41;.</p>
 <h2 id="macos"><a href="#macos" class="header-anchor">macOS</a></h2>
-<p>On macOS, a <code>julia-1.10.2-mac64.dmg</code> file is provided, which contains <code>Julia-1.10.app</code>. Installation is the same as any other Mac software: drag the <code>Julia-1.10.app</code> to Applications Folder&#39;s Shortcut. The Julia download runs on macOS 10.9 Mavericks and later releases. You can build from source for macOS 10.6 Snow Leopard &#40;possibly earlier versions as well&#41; and 32-bit but neither are fully supported.</p>
+<p>On macOS, a <code>julia-1.10.4-mac64.dmg</code> file is provided, which contains <code>Julia-1.10.app</code>. Installation is the same as any other Mac software: drag the <code>Julia-1.10.app</code> to Applications Folder&#39;s Shortcut. The Julia download runs on macOS 10.9 Mavericks and later releases. You can build from source for macOS 10.6 Snow Leopard &#40;possibly earlier versions as well&#41; and 32-bit but neither are fully supported.</p>
 <p>You can launch Julia by opening the Julia app <a href="https://www.howtogeek.com/409411/how-to-launch-applications-on-your-mac/">like any other application</a>.</p>
 <h3 id="optional_add_julia_to_path"><a href="#optional_add_julia_to_path" class="header-anchor">Optional: Add Julia to PATH</a></h3>
 <p>If you want to launch Julia from the command line, first <a href="https://www.howtogeek.com/682770/how-to-open-the-terminal-on-a-mac/">open a new terminal window</a>, then run the following snippet from your <a href="https://superuser.com/questions/144666/what-is-the-difference-between-shell-console-and-terminal">shell</a> &#40;e.g., using the Terminal app, not inside the Julia prompt&#41;.</p>
@@ -298,30 +288,6 @@ sudo ln -s /Applications/Julia-1.10.app/Contents/Resources/julia/bin/julia /usr/
 
     <footer class="container-fluid footer-copy">
   <div class="container">
-
-    <!-- Begin Mailchimp Signup Form -->
-    <link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-    <style type="text/css">
-      #mc_embed_signup{ clear:left; font:14px Helvetica,Arial,sans-serif; }
-      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-    </style>
-    <div id="mc_embed_signup">
-      <form action="https://julialang.us14.list-manage.com/subscribe/post?u=d78e03c1818e29eeda84ff234&amp;id=c17a203547" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-      <div id="mc_embed_signup_scroll">
-        <div hidden="true"><input type="hidden" name="tags" value="7245945"></div>
-        <div id="mce-responses" class="clear" style="display: inline-block;">
-          <div class="response" id="mce-error-response" style="display:none"></div>
-          <div class="response" id="mce-success-response" style="display:none"></div>
-        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-        <div style="position: absolute; left: -5000px; display: inline-block;" aria-hidden="true"><input type="text" name="b_d78e03c1818e29eeda84ff234_c17a203547" tabindex="-1" value="" style="display: inline-block;"></div>
-        <div class="clear" style="display: inline-block; display: flex; justify-content: center;"><h2 style="display: inline-block; margin-right: 15px; color:white;">Stay up to date on all things Julia!</h2><input type="email" value="" placeholder="Enter your email" name="EMAIL" class="required email" id="mce-EMAIL" style="margin-right: 15px; display: inline-block; align-self: center; line-height: 2em;"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="display: inline-block; align-self: center; margin: 0 5px 0 0;"></div>
-      </div>
-      </form>
-    </div>
-    <script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-    <!--End mc_embed_signup-->
-
     <div class="row footrow">
       <ul>
         <li><a href="/previews/PR2000/project">About</a></li>
@@ -366,8 +332,9 @@ sudo ln -s /Applications/Julia-1.10.app/Contents/Resources/julia/bin/julia /usr/
     </div>
     <div id="footer-bottom" class="row">
       <div class="col-md-10 py-2">
-        <p>This site is powered by <a href="https://www.netlify.com">Netlify</a>, <a href="https://franklinjl.org">Franklin.jl</a>, and the <a href="https://julialang.org">Julia Programming Language</a>. We thank <a href="https://www.fastly.com">Fastly</a> for their generous infrastructure support.</p>
-        <p>©2023 JuliaLang.org <a href="https://github.com/JuliaLang/www.julialang.org/graphs/contributors">contributors</a>. The content on this website is made available under the <a href="https://github.com/JuliaLang/www.julialang.org/blob/master/LICENSE.md">MIT license</a>.
+        <p>Last modified: July 20, 2024. This site is powered by <a href="https://www.netlify.com">Netlify</a>, <a href="https://franklinjl.org">Franklin.jl</a>, and the <a href="https://julialang.org">Julia Programming Language</a>.</p>
+        <p>We thank <a href="https://www.fastly.com">Fastly</a> for their generous infrastructure support.</p>
+        <p>©2024 JuliaLang.org <a href="https://github.com/JuliaLang/www.julialang.org/graphs/contributors">contributors</a>. The content on this website is made available under the <a href="https://github.com/JuliaLang/www.julialang.org/blob/master/LICENSE.md">MIT license</a>.</p>
       </div>
       <div class="col-md-2 py-2">
         <span class="float-sm-right">

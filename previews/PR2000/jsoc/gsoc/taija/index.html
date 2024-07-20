@@ -31,17 +31,7 @@
 
 
 
-<!-- NOTE: google tracking -->
-
-<script type="application/javascript">
-	var doNotTrack = false;
-	if (!doNotTrack) {
-		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-		ga('create', 'UA-28835595-1', 'auto', { 'anonymize_ip': true });
-		ga('send', 'pageview', { 'anonymize_ip': true });
-	}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script defer data-domain="julialang.org" src="https://plausible.io/js/script.js"></script>
 
 
    <title>Taija Projects</title>   
@@ -204,6 +194,56 @@
 <li><p>Comprehensively test and document your work</p>
 </li>
 </ul>
+<h2 id="project_3_counterfactuals_for_llms_model_explainability_and_generative_ai"><a href="#project_3_counterfactuals_for_llms_model_explainability_and_generative_ai" class="header-anchor">Project 3: Counterfactuals for LLMs &#40;<em>Model Explainability</em> and <em>Generative AI</em>&#41;</a></h2>
+<p><strong>Project Overview:</strong> This project aims to extend the functionality of <a href="https://github.com/JuliaTrustworthyAI/CounterfactualExplanations.jl">CounterfactualExplanations.jl</a> to Large Language Models &#40;LLMs&#41;. As a backbone for this, support for computing feature attributions for LLMs will also need to be implemented. The project will contribute to both <a href="https://github.com/JuliaTrustworthyAI">Taija</a> and <a href="https://github.com/JuliaGenAI">JuliaGenAI</a>. </p>
+<p><strong>Mentor:</strong> <a href="https://github.com/pat-alt">Patrick Altmeyer</a> &#40;Taija&#41; and <a href="https://github.com/svilupp">Jan Siml</a>  &#40;JuliaGenAI&#41;</p>
+<p><strong>Project Difficulty</strong>: Medium</p>
+<p><strong>Estimated Duration</strong>: 175 hours</p>
+<p><strong>Ideal Candidate Profile:</strong></p>
+<ul>
+<li><p>Experience with Julia and multiple dispatch of advantage, but not crucial</p>
+</li>
+<li><p>Good knowledge of machine learning and statistics</p>
+</li>
+<li><p>Good understanding of Large Language Models &#40;LLMs&#41;</p>
+</li>
+<li><p>Ideally previous experience with <a href="https://github.com/chengchingwen/Transformers.jl">Transformers.jl</a></p>
+</li>
+</ul>
+<p><strong>Project Goals and Deliverables:</strong></p>
+<ul>
+<li><p>Carefully think about architecture choices: how can we fit support for LLMs into the existing code base of <a href="https://github.com/JuliaTrustworthyAI/CounterfactualExplanations.jl">CounterfactualExplanations.jl</a>?</p>
+</li>
+<li><p>Implement current state-of-the-art approaches such as <a href="https://aclanthology.org/2021.findings-acl.336.pdf">MiCE</a> and <a href="https://aclanthology.org/2022.findings-emnlp.216.pdf">CORE</a></p>
+</li>
+<li><p>Comprehensively test and document your work</p>
+</li>
+</ul>
+<h2 id="project_4_from_counterfactuals_to_interventions_recourse_through_minimal_causal_interventions"><a href="#project_4_from_counterfactuals_to_interventions_recourse_through_minimal_causal_interventions" class="header-anchor">Project 4: From Counterfactuals to Interventions &#40;Recourse through Minimal Causal Interventions&#41;</a></h2>
+<p><strong>Project Overview:</strong> This extension aims to enhance the CounterfactualExplanations.jl package by incorporating a module for generating actionable recourse through minimal causal interventions.</p>
+<p><strong>Mentor:</strong> <a href="https://github.com/pat-alt">Patrick Altmeyer</a> &#40;Taija&#41; and <a href="https://github.com/mschauer">Moritz Schauer</a> &#40;CausalInference.jl&#41;</p>
+<p><strong>Project Difficulty:</strong> Hard</p>
+<p><strong>Estimated Duration:</strong> 350 hours</p>
+<p><strong>Ideal Candidate Profile:</strong></p>
+<ul>
+<li><p>Experience with Julia</p>
+</li>
+<li><p>Background in causality and familiarity with counterfactual reasoning.</p>
+</li>
+<li><p>Basic knowledge of minimal interventions and causal graph building.</p>
+</li>
+</ul>
+<p><strong>Project Goals and Deliverables:</strong></p>
+<ul>
+<li><p>Carefully think about architecture choices: how can we fit support for causal interventions into the existing code base?</p>
+</li>
+<li><p>Develop code that could integrate causal graph building with other Julia libs such as <a href="https://github.com/JuliaGraphs/Graphs.jl">Graphs.jl</a>, <a href="https://juliagraphs.org/GraphPlot.jl/">GraphPlot.jl</a> and <a href="https://github.com/mschauer/CausalInference.jl">CausalInference.jl</a>.</p>
+</li>
+<li><p>Implement current state-of-the-art approaches for minimal interventions using structured causal models &#40;SCMs&#41;.</p>
+</li>
+<li><p>Comprehensively test and document your work.</p>
+</li>
+</ul>
 <h2 id="about_us"><a href="#about_us" class="header-anchor">About Us</a></h2>
 <p><a href="https://www.paltmeyer.com/">Patrick Altmeyer</a> is a PhD Candidate in Trustworthy Artificial Intelligence at Delft University of Technology working on the intersection of Computer Science and Finance. He has presented work related to Taija at JuliaCon 2022 and 2023. In the past year, Patrick has mentored multiple groups of students at Delft University of Technology who have made major contributions to Taija. </p>
 <h2 id="how_to_contact_us"><a href="#how_to_contact_us" class="header-anchor">How to Contact Us</a></h2>
@@ -281,30 +321,6 @@
 
     <footer class="container-fluid footer-copy">
   <div class="container">
-
-    <!-- Begin Mailchimp Signup Form -->
-    <link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-    <style type="text/css">
-      #mc_embed_signup{ clear:left; font:14px Helvetica,Arial,sans-serif; }
-      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-    </style>
-    <div id="mc_embed_signup">
-      <form action="https://julialang.us14.list-manage.com/subscribe/post?u=d78e03c1818e29eeda84ff234&amp;id=c17a203547" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-      <div id="mc_embed_signup_scroll">
-        <div hidden="true"><input type="hidden" name="tags" value="7245945"></div>
-        <div id="mce-responses" class="clear" style="display: inline-block;">
-          <div class="response" id="mce-error-response" style="display:none"></div>
-          <div class="response" id="mce-success-response" style="display:none"></div>
-        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-        <div style="position: absolute; left: -5000px; display: inline-block;" aria-hidden="true"><input type="text" name="b_d78e03c1818e29eeda84ff234_c17a203547" tabindex="-1" value="" style="display: inline-block;"></div>
-        <div class="clear" style="display: inline-block; display: flex; justify-content: center;"><h2 style="display: inline-block; margin-right: 15px; color:white;">Stay up to date on all things Julia!</h2><input type="email" value="" placeholder="Enter your email" name="EMAIL" class="required email" id="mce-EMAIL" style="margin-right: 15px; display: inline-block; align-self: center; line-height: 2em;"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="display: inline-block; align-self: center; margin: 0 5px 0 0;"></div>
-      </div>
-      </form>
-    </div>
-    <script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-    <!--End mc_embed_signup-->
-
     <div class="row footrow">
       <ul>
         <li><a href="/previews/PR2000/project">About</a></li>
@@ -349,8 +365,9 @@
     </div>
     <div id="footer-bottom" class="row">
       <div class="col-md-10 py-2">
-        <p>This site is powered by <a href="https://www.netlify.com">Netlify</a>, <a href="https://franklinjl.org">Franklin.jl</a>, and the <a href="https://julialang.org">Julia Programming Language</a>. We thank <a href="https://www.fastly.com">Fastly</a> for their generous infrastructure support.</p>
-        <p>©2023 JuliaLang.org <a href="https://github.com/JuliaLang/www.julialang.org/graphs/contributors">contributors</a>. The content on this website is made available under the <a href="https://github.com/JuliaLang/www.julialang.org/blob/master/LICENSE.md">MIT license</a>.
+        <p>Last modified: July 20, 2024. This site is powered by <a href="https://www.netlify.com">Netlify</a>, <a href="https://franklinjl.org">Franklin.jl</a>, and the <a href="https://julialang.org">Julia Programming Language</a>.</p>
+        <p>We thank <a href="https://www.fastly.com">Fastly</a> for their generous infrastructure support.</p>
+        <p>©2024 JuliaLang.org <a href="https://github.com/JuliaLang/www.julialang.org/graphs/contributors">contributors</a>. The content on this website is made available under the <a href="https://github.com/JuliaLang/www.julialang.org/blob/master/LICENSE.md">MIT license</a>.</p>
       </div>
       <div class="col-md-2 py-2">
         <span class="float-sm-right">
